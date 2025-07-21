@@ -1,0 +1,30 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001; /* 確保按鈕在最上層 */
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+  margin-left: 0; /* 預設不偏移 */
+}
+
+.main-content.sidebar-open {
+  margin-left: 250px; /* 當側邊欄打開時，主內容向右偏移 */
+}

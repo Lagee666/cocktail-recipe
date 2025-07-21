@@ -1,0 +1,60 @@
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: fixed; /* 固定在左側 */
+  height: 100vh;
+  top: 0;
+  left: -250px; /* 預設隱藏 */
+  transition: left 0.3s ease-in-out;
+  z-index: 1000; /* 確保在主內容之上 */
+  overflow-y: auto; /* 材料多時可滾動 */
+}
+
+.sidebar.open {
+  left: 0; /* 打開時顯示 */
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+    color: #333;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.sidebar li:hover {
+  background-color: #e9e9e9;
+}
+
+.sidebar li.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.close-sidebar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+}
+
+.close-sidebar:hover {
+    color: #000;
+}
