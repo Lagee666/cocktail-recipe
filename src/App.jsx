@@ -33,9 +33,11 @@ function App() {
 
   return (
     <div className="app-container">
-      <button className="sidebar-toggle" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+      {/* <main className={'main-content'}> */}
+      <button className={`sidebar-toggle ${isSidebarOpen ? 'sidebar-open' : ''}`} onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
         {isSidebarOpen ? '關閉' : '打開'} 材料選單
       </button>
+      {/* </main> */}
 
       <Sidebar
         materials={allMaterials}
